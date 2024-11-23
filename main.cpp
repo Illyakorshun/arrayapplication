@@ -5,18 +5,27 @@ using namespace std;
 
 int main()
 {
-    double num = 5;
-	array <double, 5> arr;
-	double per = 0;
+    const int numM = 12;
+    array<double, numM> profits;
+    int max = 0, min = 0;
 
-	for (int i = 0; i < num; i++) {
-		cout << "Enter a number: ";
-		cin >> arr[i];
-		per += arr[i];
-	}
+    for (int i = 0; i < numM; ++i) {
+        cout << "Enter the profit for month " << i + 1 << ": ";
+        cin >> profits[i];
+    }
 
-	cout << "The average of the numbers is: " << per << endl;
-		
+    for (int i = 1; i < numM; ++i) {
+        if (profits[i] > profits[max]) {
+            max = i;
+        }
+        if (profits[i] < profits[min]) {
+            min = i;
+        }
+    }
+
+    cout << "Max: " << max + 1  << endl;
+    cout << "Min: " << min + 1  << endl;
 
     return 0;
 }
+
