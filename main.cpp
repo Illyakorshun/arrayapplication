@@ -1,37 +1,20 @@
 #include <iostream>
-#include <ctime>
+#include <array>
 
 using namespace std;
 
-
-int main() 
+int main()
 {
-	srand(time(NULL));
-	const size_t allocated_memory = 100;
-	int array_[allocated_memory];
-	size_t size;
-	do
-	{
-		cout << "Enter the size of the array: ";
-		cin >> size;
-		if (size <= allocated_memory)
-		{
-			break;
-		}
-		cout << "The size of the array is too big. Try again.\n";
-	} 
-	while (true);
-	for (size_t i = 0; i < size; i++)
-	{
-		array_[i] = rand() % 100;
-	}
-	cout << "Array: ";
-	for (size_t i = 0; i < size; i++)
-	{
-		cout << array_[i] << " ";
-	}
-	cout << endl;
-	cout << sizeof(array_) << endl;
+    array<double, 6> profits;
+    double totalProfit = 0.0;
 
-	return 0;
+    for (int i = 0; i < 6; ++i) {
+        cout << "enter pributok  " << i + 1 << ": ";
+        cin >> profits[i];
+        totalProfit += profits[i];
+    }
+
+    cout << "all pributok: " << totalProfit << endl;
+
+    return 0;
 }
