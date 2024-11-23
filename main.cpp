@@ -6,19 +6,19 @@ using namespace std;
 int main()
 {
     const int numM = 12;
-    array<double, numM> profits;
+    array<double, numM> profit;
     int max = 0, min = 0;
 
     for (int i = 0; i < numM; ++i) {
-        cout << "Enter the profit for month " << i + 1 << ": ";
-        cin >> profits[i];
+        cout << "Enter: " << i + 1 << ": ";
+        cin >> profit[i];
     }
 
     for (int i = 1; i < numM; ++i) {
-        if (profits[i] > profits[max]) {
+        if (profit[i] > profit[max]) {
             max = i;
         }
-        if (profits[i] < profits[min]) {
+        if (profit[i] < profit[min]) {
             min = i;
         }
     }
