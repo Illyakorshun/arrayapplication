@@ -1,20 +1,31 @@
 #include <iostream>
-#include <array>
+#include <vector>
 
 using namespace std;
 
 int main()
 {
-    array<double, 6> profits;
-    double totalProfit = 0.0;
+    int n = 0;
+    cout << "Enter size of array: ";
+    cin >> n;
 
-    for (int i = 0; i < 6; ++i) {
-        cout << "enter pributok  " << i + 1 << ": ";
-        cin >> profits[i];
-        totalProfit += profits[i];
+    if (n <= 0) {
+        cout << "Invalid array size." << endl;
+        return 1;
     }
 
-    cout << "all pributok: " << totalProfit << endl;
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; ++i) {
+        cout << "Enter element " << i + 1 << ": ";
+        cin >> arr[i];
+    }
+
+    cout << "Array in reverse order: ";
+    for (int i = n - 1; i >= 0; --i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
