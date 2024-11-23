@@ -1,31 +1,22 @@
 #include <iostream>
-#include <vector>
+#include <array>
 
 using namespace std;
 
 int main()
 {
-    int n = 0;
-    cout << "Enter size of array: ";
-    cin >> n;
+    double num = 5;
+	array <double, 5> arr;
+	double per = 0;
 
-    if (n <= 0) {
-        cout << "Invalid array size." << endl;
-        return 1;
-    }
+	for (int i = 0; i < num; i++) {
+		cout << "Enter a number: ";
+		cin >> arr[i];
+		per += arr[i];
+	}
 
-    vector<int> arr(n);
-
-    for (int i = 0; i < n; ++i) {
-        cout << "Enter element " << i + 1 << ": ";
-        cin >> arr[i];
-    }
-
-    cout << "Array in reverse order: ";
-    for (int i = n - 1; i >= 0; --i) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+	cout << "The average of the numbers is: " << per << endl;
+		
 
     return 0;
 }
