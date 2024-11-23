@@ -10,7 +10,7 @@ int main()
     int max = 0, min = 0;
 
     for (int i = 0; i < numM; ++i) {
-        cout << "Enter: " << i + 1 << ": ";
+        cout << "Enter:  " << i + 1 << ": ";
         cin >> profit[i];
     }
 
@@ -23,8 +23,8 @@ int main()
         }
     }
 
-    cout << "Max: " << max + 1  << endl;
-    cout << "Min: " << min + 1  << endl;
+    cout << "Max: " << profit[max] << " In a " << max + 1 << endl;
+    cout << "Min: " << profit[min] << " In a " << min + 1 << endl;
 
     return 0;
 }
